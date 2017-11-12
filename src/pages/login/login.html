@@ -1,0 +1,45 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="submit()">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="credentials.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]='credentials.password' name="password"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block round margin-top>Login</button>
+  </form>
+  
+  
+  <h2 style="text-align : center">Or</h2> 
+
+  <button ion-button (click)='loginGoogle()'  block round margin-top >Sign In with Google</button>
+  <button ion-button (click)='loginFacebook()'  block round margin-top >Sign In with Facebook</button>
+
+  <h2 style="text-align : center">Register</h2> 
+  <button ion-button  (click)='goRegister()' color="danger" block margin-top round>Register</button>
+  
+</ion-content>
+
+
+<!--
+   Evan Dadure (1106345)
+  Pierre Cochet (1106342)
+  Valention Buisson (1106329)
+-->

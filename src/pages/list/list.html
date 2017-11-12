@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Task List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-row>
+    <ion-col col-9>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="item.value" placeholder="New task item"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <button ion-button (click)="addItem()">Add!</button>
+    </ion-col>
+  </ion-row>
+ 
+  
+    <ion-list >
+      <ion-item *ngFor="let item of items | async ">
+        {{ item.text}}
+        <button ion-button color="danger" icon-only (click)="removeItem(item)" item-end ><ion-icon name="trash" large></ion-icon></button>
+      </ion-item>
+   
+  </ion-list>
+</ion-content>
+
+<!--
+   Evan Dadure (1106345)
+  Pierre Cochet (1106342)
+  Valention Buisson (1106329)
+-->
